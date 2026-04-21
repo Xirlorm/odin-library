@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./index.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Header section -->
+    <div class="header">
+      <h1>ODIN-LIBRARY</h1>
+      <button command="show-modal" commandfor="book-input" id="add-book-btn">
+        <img src="./icons/plus.svg" alt="Add a book" />
+      </button>
+    </div>
+    <div class="main">
+      <!-- Dialog box for book details input form -->
+      <dialog id="book-input">
+        <div>
+          <button commandfor="book-input" command="close" id="close-dialog-btn">
+            <img src="./icons/close-circle-outline.svg" alt="Close" />
+          </button>
+        </div>
+        <h2>Add A Book</h2>
+        <!-- Book details input Form -->
+        <form action="">
+          <div>
+            <label for="author">Author *</label><br />
+            <input type="text" name="author" id="author" required />
+          </div>
+          <div>
+            <label for="title">Title *</label><br />
+            <input type="text" name="title" id="title" required />
+          </div>
+          <div>
+            <label for="page-count">Number of Pages *</label><br />
+            <input type="number" name="pages" id="page-count" required />
+          </div>
+          <div class="read-status-input">
+            <label for="read-status">Done Reading?</label>
+            <input type="checkbox" name="read" id="read-status" />
+          </div>
+          <div>
+            <button type="submit">Add Book</button>
+          </div>
+        </form>
+      </dialog>
+      <!-- Book display container -->
+      <div class="shelf"></div>
+    </div>
+  </body>
+</html>
