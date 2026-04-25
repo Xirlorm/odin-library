@@ -9,12 +9,12 @@ class Book {
 		this.read = read;
 		this.id = crypto.randomUUID();
 	}
-}
 
-// Method to provide information about book instances
-Book.prototype.info = function() {
-	return `${this.title} by ${this.author}, ${this.pages}pages, ${this.read}`;
-};
+	// Method to provide information about book instances
+	info() {
+		return `${this.title} by ${this.author}, ${this.pages}pages, ${this.read}`;
+	}
+}
 
 // Create and add a new book entry to library using details provided
 function addBookToLibrary(title, author, pages, read) {
